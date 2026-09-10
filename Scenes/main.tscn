@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://5gcybbx4p5jy" path="res://Assets/Grass_block.png" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://o58grwrd8h31" path="res://Scenes/player.tscn" id="2_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://cnyeynhsht44x" path="res://Scenes/patrol_enemy.tscn" id="3_kry3j"]
-[ext_resource type="Script" uid="uid://j5eiwpy0m2sn" path="res://Scripts/patrol_enemy.gd" id="4_21xkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21xkr"]
 size = Vector2(1167, 73)
@@ -104,9 +103,8 @@ texture = ExtResource("1_8gbba")
 
 [node name="Player" parent="." unique_id=1427227906 instance=ExtResource("2_jjvhh")]
 position = Vector2(777, 519)
-health = 13
+is_player = true
 
 [node name="PatrolEnemy" parent="." unique_id=431695515 instance=ExtResource("3_kry3j")]
 position = Vector2(261, 532)
-script = ExtResource("4_21xkr")
 health = 3
