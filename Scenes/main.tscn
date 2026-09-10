@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bltwib0bnmsok"]
+
+[ext_resource type="Texture2D" uid="uid://5gcybbx4p5jy" path="res://Assets/Grass_block.png" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://o58grwrd8h31" path="res://Scenes/player.tscn" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://cnyeynhsht44x" path="res://Scenes/patrol_enemy.tscn" id="3_kry3j"]
+[ext_resource type="Script" uid="uid://j5eiwpy0m2sn" path="res://Scripts/patrol_enemy.gd" id="4_21xkr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21xkr"]
+size = Vector2(1167, 73)
+
+[node name="Main" type="Node2D" unique_id=1886520926]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1753269896]
+position = Vector2(0, 641)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=968518270]
+position = Vector2(573.5, -26.5)
+shape = SubResource("RectangleShape2D_21xkr")
+
+[node name="Grass" type="Sprite2D" parent="Ground" unique_id=1755698155]
+texture_filter = 1
+position = Vector2(0, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass2" type="Sprite2D" parent="Ground" unique_id=1129406891]
+texture_filter = 1
+position = Vector2(70, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass3" type="Sprite2D" parent="Ground" unique_id=1011594121]
+texture_filter = 1
+position = Vector2(140, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass4" type="Sprite2D" parent="Ground" unique_id=1777868257]
+texture_filter = 1
+position = Vector2(210, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass5" type="Sprite2D" parent="Ground" unique_id=1535706451]
+texture_filter = 1
+position = Vector2(280, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass6" type="Sprite2D" parent="Ground" unique_id=1800729760]
+texture_filter = 1
+position = Vector2(350, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass7" type="Sprite2D" parent="Ground" unique_id=286466161]
+texture_filter = 1
+position = Vector2(420, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass8" type="Sprite2D" parent="Ground" unique_id=1612982457]
+texture_filter = 1
+position = Vector2(490, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass9" type="Sprite2D" parent="Ground" unique_id=1060976768]
+texture_filter = 1
+position = Vector2(560, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass10" type="Sprite2D" parent="Ground" unique_id=2102409591]
+texture_filter = 1
+position = Vector2(630, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass11" type="Sprite2D" parent="Ground" unique_id=635987270]
+texture_filter = 1
+position = Vector2(700, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass12" type="Sprite2D" parent="Ground" unique_id=1161619519]
+texture_filter = 1
+position = Vector2(770, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass13" type="Sprite2D" parent="Ground" unique_id=118203214]
+texture_filter = 1
+position = Vector2(840, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass14" type="Sprite2D" parent="Ground" unique_id=284553303]
+texture_filter = 1
+position = Vector2(910, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass15" type="Sprite2D" parent="Ground" unique_id=1645946720]
+texture_filter = 1
+position = Vector2(980, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass16" type="Sprite2D" parent="Ground" unique_id=630807987]
+texture_filter = 1
+position = Vector2(1050, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Grass17" type="Sprite2D" parent="Ground" unique_id=873512684]
+texture_filter = 1
+position = Vector2(1119, -29)
+texture = ExtResource("1_8gbba")
+
+[node name="Player" parent="." unique_id=1427227906 instance=ExtResource("2_jjvhh")]
+position = Vector2(777, 519)
+health = 13
+
+[node name="PatrolEnemy" parent="." unique_id=431695515 instance=ExtResource("3_kry3j")]
+position = Vector2(261, 532)
+script = ExtResource("4_21xkr")
+health = 3

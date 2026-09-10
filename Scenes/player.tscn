@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://o58grwrd8h31"]
+
+[ext_resource type="Script" uid="uid://dmapwadve5q7c" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://c3ucqx6mmfui8" path="res://Assets/Guy.png" id="2_cvnsp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6t5aa"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1427227906]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_v0iea")
+jump_velocity = -500.0
+speed = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654412654]
+shape = SubResource("CapsuleShape2D_6t5aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=624539635]
+texture = ExtResource("2_cvnsp")
